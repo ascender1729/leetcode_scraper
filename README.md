@@ -37,17 +37,35 @@ pip install requests beautifulsoup4 pandas
 
 ## How to Use
 
-### Step 1: Create Input File
+### Step 1: Get Company-Specific LeetCode Problems
+
+You can obtain company-specific LeetCode problem lists from these repositories:
+- [LeetCode-Questions-CompanyWise](https://github.com/krishnadey30/LeetCode-Questions-CompanyWise)
+- [leetcode-company-wise-problems](https://github.com/liquidslr/leetcode-company-wise-problems)
+
+To get the links:
+1. Clone one of these repositories:
+   ```bash
+   git clone https://github.com/krishnadey30/LeetCode-Questions-CompanyWise.git
+   # OR
+   git clone https://github.com/liquidslr/leetcode-company-wise-problems.git
+   ```
+
+2. Find the CSV file for your desired company (e.g., Google, Amazon, Microsoft)
+
+3. Extract all the LeetCode problem links from the CSV file
+
+### Step 2: Create Input File
 
 1. Create a text file called `links.txt` in the project directory
-2. Paste all the LeetCode problem links in this file, one link per line, for example:
+2. Paste all the LeetCode problem links you extracted, one link per line, for example:
 ```
 https://leetcode.com/problems/two-sum/
 https://leetcode.com/problems/add-two-numbers/
 https://leetcode.com/problems/longest-substring-without-repeating-characters/
 ```
 
-### Step 2: Run the Script
+### Step 3: Run the Script
 
 ```bash
 python scraper.py
@@ -104,6 +122,10 @@ cd leetcode_scraper
 python -m venv venv
 venv\Scripts\activate
 pip install requests beautifulsoup4 pandas
+
+# Get company-specific problem lists
+git clone https://github.com/krishnadey30/LeetCode-Questions-CompanyWise.git
+# Now open the CSV for your target company and copy the links
 
 # Create links.txt with your LeetCode problem URLs
 # (each URL on a new line)
